@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      args:
+        NON_PRIVILEGED_USER_NAME: google
+    container_name: google-ads-php-app
+    volumes:
+      - ./app/src:/var/www/html/
+    networks:
+      - google-ads-php
+
+networks:
+  google-ads-php:
+    name: google-ads-php-network
+    driver: bridge
