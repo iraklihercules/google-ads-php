@@ -27,9 +27,14 @@ $googleAdsClient = (new GoogleAdsClientBuilder())
 $googleAdsServiceClient = $googleAdsClient->getGoogleAdsServiceClient();
 
 
-// 184-366-6419
+/**
+ * Multi ad-group
+ * 184-366-6419
+ * TVL_TEST_SEARCH_PR_DICIEMBRE
+ */
 $customerId = 1843666419;
 $campaignId = 20833209032;
+
 
 $query = '
 SELECT
@@ -46,8 +51,8 @@ SELECT
 FROM campaign
 WHERE campaign.id = '.$campaignId;
 
-
 $response = $googleAdsServiceClient->search($customerId, $query);
+
 
 /** @var GoogleAdsRow $googleAdsRow */
 foreach ($response->iterateAllElements() as $googleAdsRow) {

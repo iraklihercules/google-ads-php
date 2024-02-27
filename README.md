@@ -19,7 +19,7 @@ make start  # Run the container
 make shell  # Access the container
 
 # Change directory to examples
-cd examples/
+cd scripts/
 
 # Run scripts with PHP
 php {script_name}.php
@@ -30,3 +30,5 @@ php {script_name}.php
 make stop  # Stops the container
 make down  # Deletes the container
 ```
+
+See the Google Ads Query Language documentation [here](https://developers.google.com/google-ads/api/docs/query/overview).
