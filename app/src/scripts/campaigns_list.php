@@ -25,7 +25,8 @@ $googleAdsServiceClient = $googleAdsClient->getGoogleAdsServiceClient();
 
 
 // 184-366-6419
-$customerId = 1843666419;
+//$customerId = 1843666419;
+$customerId = 1550260035;
 
 $query = 'SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id';
 
