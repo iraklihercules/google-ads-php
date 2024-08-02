@@ -1,5 +1,5 @@
 {
   "require": {
-    "googleads/google-ads-php": "^19.2"
+    "googleads/google-ads-php": "^22.0"
   }
 }
