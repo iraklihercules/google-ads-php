@@ -2,7 +2,7 @@
 
 // https://developers.google.com/google-ads/api/docs/client-libs/php/gapic
 
-require 'helpers.php';
+require 'google_helpers.php';
 
 use Google\Ads\GoogleAds\V16\Services\SearchGoogleAdsRequest;
 
