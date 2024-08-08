@@ -1,6 +1,6 @@
 <?php
 
-require 'google_helpers.php';
+require 'base.php';
 
 use Google\Ads\GoogleAds\V16\Services\SearchGoogleAdsRequest;
 
@@ -37,4 +37,4 @@ $service->close();
 
 
 $normalized = normalizePagedListResponse($response);
-print_r($normalized);
+echo json_encode($normalized, JSON_PRETTY_PRINT)."\n";

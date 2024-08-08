@@ -31,4 +31,7 @@ make stop  # Stops the container
 make down  # Deletes the container
 ```
 
+Main documentation
+https://developers.google.com/google-ads/api/docs/start
+
 See the Google Ads Query Language documentation [here](https://developers.google.com/google-ads/api/docs/query/overview).
