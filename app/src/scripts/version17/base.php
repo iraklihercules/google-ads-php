@@ -1,12 +1,12 @@
 <?php
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/../../bootstrap.php';
 
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V16\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V16\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V17\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V17\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\V17\Services\GoogleAdsRow;
 use Google\ApiCore\PagedListResponse;
-use Google\Ads\GoogleAds\V16\Services\GoogleAdsRow;
 
 function getGoogleClient(): GoogleAdsClient
 {
