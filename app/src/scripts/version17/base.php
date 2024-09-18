@@ -36,3 +36,19 @@ function normalizePagedListResponse(PagedListResponse $response): array
 
     return $result;
 }
+
+function getReport(int $clientId, string $query)
+{
+    $serviceType = 'google_ads_service';
+    $service = getGoogleClient()->getGoogleAdsServiceClient();
+
+    $includeSummaryRow = true;
+
+    return $this->getServiceResponse(
+        $service,
+        $serviceType,
+        $clientId,
+        [$query],
+        $includeSummaryRow
+    );
+}

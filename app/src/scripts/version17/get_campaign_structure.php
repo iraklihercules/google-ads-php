@@ -45,10 +45,23 @@ WHERE campaign.id = '.$campaignId;
 $request = SearchGoogleAdsRequest::build($customerId, $query);
 // $request->setSummaryRowSetting(0);
 
+$response = null;
 
 $service = getGoogleClient()->getGoogleAdsServiceClient();
-$response = $service->search($request);
+for ($i = 0; $i < 3; $i++) {
+    try {
+        $response = $service->search($request);
+        echo "SUCCESS\n";
+        break;
+    } catch (\Exception $e) {
+        echo 'ERR '.$e->getMessage()."\n";
+    }
+}
 $service->close();
 
-$normalized = normalizePagedListResponse($response);
-echo json_encode($normalized, JSON_PRETTY_PRINT)."\n";
+if ($response) {
+    $normalized = normalizePagedListResponse($response);
+    echo json_encode($normalized, JSON_PRETTY_PRINT)."\n";
+} else {
+    echo "Failed to get response.\n";
+}
